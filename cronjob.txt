@@ -1,0 +1,63 @@
+** Estoy utilizando una MAC, en mi caso trae instalado CRON JOB **
+
+--------------------------------------------------------------------------------
+
+CRON JOB
+
+Es un calendario de tareas (que siempre estara corriendo en la pc),
+en el cual se automatiza las tareas mediante un tiempo previamente establecido de la
+siguiente manera:
+
+# ┌───────────── minute (0 - 59)
+# │ ┌───────────── hour (0 - 23)
+# │ │ ┌───────────── day of month (1 - 31)
+# │ │ │ ┌───────────── month (1 - 12)
+# │ │ │ │ ┌───────────── day of week (0 - 6) (Sunday to Saturday;
+# │ │ │ │ │                                       7 is also Sunday on some systems)
+# │ │ │ │ │
+# │ │ │ │ │
+# * * * * *  command_to_execute
+
+Cada asterisco indica un tiempo 
+
+* * * * * comando, es igual a => 
+
+(minuto - hora - dia del mes - mes - dia de la semana) comando
+
+El comando es => php 'path donde se encuentra el script php'.
+
+-------------------------------------------------------------------------------
+
+En mi caso utilize el mismo servidor(XAMMP), para ambos proyectos usando el cron job
+
+* * * * * php /Applications/XAMPP/xamppfiles/htdocs/php-retrieve/retrieve_images.php >> null
+
+Esto hara que se corra el script en la ruta indicada cada minuto de todos los dias
+
+-------------------------------------------------------------------------------
+
+Link (para no pensar tanto jajajaja) obtener el cron job adecuado
+https://crontab.guru/#5_*_*_*_*
+
+Link como funciona el cron job, por si tienes dudas: 
+https://stackoverflow.com/questions/18737407/how-to-create-cron-job-using-php
+
+https://www.youtube.com/watch?v=QZJ1drMQz1A
+
+
+--------------------------------------------------------------------------------
+
+COMO ACCEDER AL CRON JOB EN MAC
+
+1. se ejecuta en el cmd => crontab -e 
+2. teclea la letra 'i'
+2. crea el cron job
+3. escape
+4. escribe ':wq' y enter
+
+el cronjob estara creado y empezara a funcionar.
+
+para visualizar cuales cron jobs posees
+
+1. ejecuta cronjob -l
+

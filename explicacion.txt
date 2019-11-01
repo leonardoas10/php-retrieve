@@ -1,0 +1,29 @@
+Holaa Pao!!
+
+Estuve investigando el problema que me presentaste y encontre una posible solucion,
+utilice un mismo servidor ya que no poseo dos servidores.
+
+Cree dos proyectos 'php-storage' (A) y 'php-retrieve' (B).
+
+*El A seria la empresa *
+*EL B seria mcdonals*
+
+----------------
+En el A cree con html y php (index.php) una subida de imagenes a una base de datos 
+MYSQL, dichas imagenes se guardaran en la carpeta 'images'. Posterior en el archivo 
+'export_images.php', se retorna las imagenes guardadas en base de datos, en un JSON que 
+sera consumido en el proyecto (B).
+
+----------------
+
+En el B, se consume con GUZZLE la url donde se encuentre el 'export_images.php', 
+retornando como respuesta el json que contiene la informacion de las imagenes.
+Posterior, usando file_get_contents() y file_put_contents() se almacenan las imagenes 
+en la carpeta 'images' del proyecto B.
+
+Esto finaliza mostrando dichas imagenes en index.php
+
+// ----------------------------------------------- //
+
+Como hacerlo automatico?, de modo que en el servidor de mcdonalds las descargue
+en el tiempo que se requiere. Ve al archivo cronjob.txt
