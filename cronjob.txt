@@ -61,3 +61,15 @@ para visualizar cuales cron jobs posees
 
 1. ejecuta cronjob -l
 
+--------------------------------------------------------------------------------
+
+CRON JOB PARA WINDOWS
+
+Investigue para el caso de que el sistema operativo sea windows.
+
+https://www.genbeta.com/paso-a-paso/como-programar-tareas-en-windows-10
+
+https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/cc725744(v=ws.11)?redirectedfrom=MSDN
+
+https://moreabout.tech/creating-cron-jobs-in-windows-10-and-windows-server-2016/
+
